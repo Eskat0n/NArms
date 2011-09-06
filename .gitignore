@@ -1,0 +1,14 @@
+_ReSharper.*
+**/_ReSharper.*
+**/bin
+**/[bB]in
+**/obj
+*.suo
+*.user
+*.cache
+src/*/bin/*
+src/*/obj/*
+src/*/*/bin/*
+src/*/*/obj/*
+tests/*
+deploy/*

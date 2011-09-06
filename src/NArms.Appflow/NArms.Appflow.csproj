@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3829C14-9CE2-47D1-9BFB-8536C683F502}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NArms.Appflow</RootNamespace>
+    <AssemblyName>NArms.Appflow</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppflowBase.cs" />
+    <Compile Include="ArgumentDriven\Annotations\ArgumentAnnotationAttribute.cs" />
+    <Compile Include="ArgumentDriven\Annotations\FlagArgumentAttribute.cs" />
+    <Compile Include="ArgumentDriven\Configurations\ArgumentConfiguration.cs" />
+    <Compile Include="ArgumentDriven\ArgumentDrivenAppflow.cs" />
+    <Compile Include="ArgumentDriven\ArgumentsConfigurationCollection.cs" />
+    <Compile Include="ArgumentDriven\ArgumentsParsers\WindowsStyleArgumentParser.cs" />
+    <Compile Include="ArgumentDriven\ArgumentsParsers\IArgumentParser.cs" />
+    <Compile Include="ArgumentDriven\Configurations\ArgumentType.cs" />
+    <Compile Include="ArgumentDriven\Configurations\FlagArgumentConfiguration.cs" />
+    <Compile Include="ArgumentDriven\Configurations\PropertyListArgumentConfiguration.cs" />
+    <Compile Include="ArgumentDriven\Configurations\SinglePropertyArgumentConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepByStep\StepAppflow.cs" />
+    <Compile Include="StepByStep\StepAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interactive\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
