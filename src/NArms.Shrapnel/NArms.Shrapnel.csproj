@@ -5,20 +5,19 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7ED930DB-60A9-4A07-8033-6F622CD92512}</ProjectGuid>
+    <ProjectGuid>{08EDCAF1-823E-42C4-ABA1-DFF8F4F93258}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NArms.Core</RootNamespace>
-    <AssemblyName>NArms.Core.Tests</AssemblyName>
+    <RootNamespace>NArms.Shrapnel</RootNamespace>
+    <AssemblyName>NArms.Shrapnel</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\tests\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,39 +25,32 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\tests\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit">
-      <HintPath>..\..\lib\xUnit\xunit.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.extensions">
-      <HintPath>..\..\lib\xUnit\xunit.extensions.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collections\CompositeKeyTests.cs" />
-    <Compile Include="Dynamics\Fluent\StatementAttributeTests.cs" />
-    <Compile Include="Dynamics\PouchTests.cs" />
+    <Compile Include="DataObjects\HttpResponse.cs" />
+    <Compile Include="DataObjects\HttpRequest.cs" />
+    <Compile Include="HttpServer.cs" />
+    <Compile Include="Processing\CustomRequestProcessor.cs" />
+    <Compile Include="Processing\DefaultRequestDispatcher.cs" />
+    <Compile Include="Processing\RequestProcessorBase.cs" />
+    <Compile Include="IRequestDispatcher.cs" />
+    <Compile Include="IRequestProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Text\StringSplitExtensionsTests.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NArms.Core\NArms.Core.csproj">
-      <Project>{176DD905-A976-4292-BE59-5A1836DE22DD}</Project>
-      <Name>NArms.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
