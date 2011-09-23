@@ -49,6 +49,7 @@
     <Compile Include="Collections\CompositeKeyTests.cs" />
     <Compile Include="Dynamics\Fluent\StatementAttributeTests.cs" />
     <Compile Include="Dynamics\PouchTests.cs" />
+    <Compile Include="IntExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Text\StringSplitExtensionsTests.cs" />
   </ItemGroup>

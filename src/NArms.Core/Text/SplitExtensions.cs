@@ -2,11 +2,11 @@ using System;
 
 namespace NArms.Text
 {
-    public static class StringSplitExtensions
+    public static class SplitExtensions
     {
         public static string[] Split(this string @string, params string[] separator)
         {
-            return @string.Split(separator);
+            return @string.Split(separator, StringSplitOptions.None);
         }
         
         public static string[] Split(this string @string, params char[] separator)
