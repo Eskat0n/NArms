@@ -3,7 +3,7 @@ namespace NArms.Smoothbore.Parsing
     using System.Collections.Generic;
     using System.IO;
 
-    internal class InitFileParser
+    internal class IniFileParser
     {
         public IEnumerable<IniElement> Parse(TextReader textReader)
         {

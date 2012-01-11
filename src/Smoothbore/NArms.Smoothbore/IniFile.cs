@@ -23,7 +23,7 @@
 
         public static IniFile Load(TextReader textReader)
         {
-            var parser = new InitFileParser();
+            var parser = new IniFileParser();
             return new IniFile(parser.Parse(textReader));
         }
 
