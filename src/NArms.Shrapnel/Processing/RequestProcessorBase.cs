@@ -42,9 +42,9 @@ namespace NArms.Shrapnel.Processing
 
             var requestData = requestDataTemp.ToString();
 
-            var responce = Process(method, url, requestHeaders, requestData);
-
-            _socket.Send(responce.Data);
+//            var responce = Process(method, url, requestHeaders, requestData);
+//
+//            _socket.Send(responce.Data);
             _socket.Close();
         }
 
