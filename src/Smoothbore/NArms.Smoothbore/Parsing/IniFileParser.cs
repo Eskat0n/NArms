@@ -20,16 +20,20 @@ namespace NArms.Smoothbore.Parsing
                 if (line == null)
                     break;
 
-                if (string.IsNullOrWhiteSpace(line))
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith(";"))
                     continue;
 
-                var lineParts = line.Split(new[] {'='}, 2);
-                var parameterName = lineParts[0].Trim();
-                var parameterValue = lineParts[1].Trim();
+                if (line.Contains("="))
+                {
+                    var lineParts = line.Split(new[] {'='}, 2);
+                    var parameterName = lineParts[0];
+                    var parameterValue = lineParts[1];
 
-                var iniParameter = new IniParameter(parameterName, parameterValue);
+                    if (parameterValue.Contains(";"))
+                        parameterValue = parameterValue.Split(';')[0];
 
-                result.Add(iniParameter);
+                    result.Add(new IniParameter(parameterName.Trim(), parameterValue.Trim()));
+                }                
             }
 
             return result;
