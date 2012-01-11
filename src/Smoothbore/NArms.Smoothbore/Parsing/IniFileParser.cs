@@ -24,7 +24,7 @@ namespace NArms.Smoothbore.Parsing
                 if (line == null)
                     break;
 
-                if (string.IsNullOrWhiteSpace(line) || line.StartsWith(";"))
+                if (string.IsNullOrWhiteSpace(line) || line.TrimStart().StartsWith(";"))
                     continue;
 
                 var sectionMatch = Regex.Match(line, SectionPattern);

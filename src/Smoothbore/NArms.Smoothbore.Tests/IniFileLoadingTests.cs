@@ -35,6 +35,13 @@
         }
         
         [Fact]
+        public void ShouldProcudeCorrectElementsListForFileWithIndentedComment()
+        {
+            var iniFile = IniFile.Load("TestFiles/Simple.CommentIndented.ini");
+            VerifySimpleFileContent(iniFile.Parameters);
+        }
+        
+        [Fact]
         public void ShouldProcudeCorrectElementsListForFileWithOneSection()
         {
             var iniFile = IniFile.Load("TestFiles/Sections.One.ini");
