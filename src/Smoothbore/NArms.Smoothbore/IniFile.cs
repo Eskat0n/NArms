@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using Parsing;
 
     public class IniFile
@@ -40,6 +41,30 @@
         public IEnumerable<IniElement> Elements
         {
             get { return _elements; }
+        }
+        
+        public IEnumerable<IniSection> Sections
+        {
+            get
+            {
+                return _elements
+                    .OfType<IniSection>()
+                    .ToArray();
+            }
+        }
+        
+        public IEnumerable<IniParameter> Parameters
+        {
+            get
+            {
+                var sectionParameters = Elements.OfType<IniSection>()
+                    .SelectMany(x => x.Parameters);
+
+                return _elements
+                    .OfType<IniParameter>()
+                    .Union(sectionParameters)
+                    .ToArray();
+            }
         }
 
         public void Save(string filename)

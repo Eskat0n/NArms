@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TestFiles\Sections.One.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestFiles\Simple.Condensed.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

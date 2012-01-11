@@ -2,9 +2,12 @@ namespace NArms.Smoothbore.Parsing
 {
     using System.Collections.Generic;
     using System.IO;
+    using System.Text.RegularExpressions;
 
     internal class IniFileParser
     {
+        private const string SectionPattern = @"\[([^\]]+)\]";
+
         public IEnumerable<IniElement> Parse(TextReader textReader)
         {
             return Parse(textReader, ParseOptions.Empty);
@@ -13,6 +16,7 @@ namespace NArms.Smoothbore.Parsing
         public IEnumerable<IniElement> Parse(TextReader textReader, ParseOptions parseOptions)
         {
             var result = new List<IniElement>();
+            IniSection currentSection = null;
 
             while (true)
             {
@@ -23,7 +27,14 @@ namespace NArms.Smoothbore.Parsing
                 if (string.IsNullOrWhiteSpace(line) || line.StartsWith(";"))
                     continue;
 
-                if (line.Contains("="))
+                var sectionMatch = Regex.Match(line, SectionPattern);
+
+                if (sectionMatch.Success)
+                {
+                    currentSection = new IniSection(sectionMatch.Groups[1].Value);
+                    result.Add(currentSection);
+                }
+                else if (line.Contains("="))
                 {
                     var lineParts = line.Split(new[] {'='}, 2);
                     var parameterName = lineParts[0];
@@ -32,7 +43,12 @@ namespace NArms.Smoothbore.Parsing
                     if (parameterValue.Contains(";"))
                         parameterValue = parameterValue.Split(';')[0];
 
-                    result.Add(new IniParameter(parameterName.Trim(), parameterValue.Trim()));
+                    var iniParameter = new IniParameter(parameterName.Trim(), parameterValue.Trim());
+
+                    if (currentSection != null)
+                        currentSection.AddParameter(iniParameter);
+                    else
+                        result.Add(iniParameter);
                 }                
             }
 
