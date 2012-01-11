@@ -55,6 +55,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Shrapnel", "src\NArms
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Shrapnel.Tests", "src\NArms.Shrapnel.Tests\NArms.Shrapnel.Tests.csproj", "{38B34CE4-1D17-46C3-988C-7898D14D29A9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Smoothbore", "Smoothbore", "{907B4202-9B38-4D01-90E2-C6FC2D84523C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Smoothbore", "src\Smoothbore\NArms.Smoothbore\NArms.Smoothbore.csproj", "{5B863E1D-4700-4F88-98BB-20228276FFDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Smoothbore.Tests", "src\Smoothbore\NArms.Smoothbore.Tests\NArms.Smoothbore.Tests.csproj", "{A677EF3C-C5AB-4CBD-949A-930D74B64114}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +131,14 @@ Global
 		{38B34CE4-1D17-46C3-988C-7898D14D29A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38B34CE4-1D17-46C3-988C-7898D14D29A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38B34CE4-1D17-46C3-988C-7898D14D29A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B863E1D-4700-4F88-98BB-20228276FFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B863E1D-4700-4F88-98BB-20228276FFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B863E1D-4700-4F88-98BB-20228276FFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B863E1D-4700-4F88-98BB-20228276FFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A677EF3C-C5AB-4CBD-949A-930D74B64114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A677EF3C-C5AB-4CBD-949A-930D74B64114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A677EF3C-C5AB-4CBD-949A-930D74B64114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A677EF3C-C5AB-4CBD-949A-930D74B64114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,5 +160,7 @@ Global
 		{E66195D5-E7D3-46BD-9C1F-7C4C9FC87929} = {0B429748-B9DB-419E-B27A-CA5839C41D87}
 		{08EDCAF1-823E-42C4-ABA1-DFF8F4F93258} = {34894491-EEA8-4018-822D-EF55DEA92BBD}
 		{38B34CE4-1D17-46C3-988C-7898D14D29A9} = {34894491-EEA8-4018-822D-EF55DEA92BBD}
+		{5B863E1D-4700-4F88-98BB-20228276FFDC} = {907B4202-9B38-4D01-90E2-C6FC2D84523C}
+		{A677EF3C-C5AB-4CBD-949A-930D74B64114} = {907B4202-9B38-4D01-90E2-C6FC2D84523C}
 	EndGlobalSection
 EndGlobal
