@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Smoothbore", "src\Smo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Smoothbore.Tests", "src\Smoothbore\NArms.Smoothbore.Tests\NArms.Smoothbore.Tests.csproj", "{A677EF3C-C5AB-4CBD-949A-930D74B64114}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutoMapper", "AutoMapper", "{ADCC19B3-BF1F-4F3A-89BF-25507A60B5BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.AutoMapper", "src\NArms.AutoMapper\NArms.AutoMapper.csproj", "{77A49F03-CB8F-47C7-B341-76A8AF02F3D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +143,10 @@ Global
 		{A677EF3C-C5AB-4CBD-949A-930D74B64114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A677EF3C-C5AB-4CBD-949A-930D74B64114}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A677EF3C-C5AB-4CBD-949A-930D74B64114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A49F03-CB8F-47C7-B341-76A8AF02F3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A49F03-CB8F-47C7-B341-76A8AF02F3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A49F03-CB8F-47C7-B341-76A8AF02F3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A49F03-CB8F-47C7-B341-76A8AF02F3D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,5 +170,6 @@ Global
 		{38B34CE4-1D17-46C3-988C-7898D14D29A9} = {34894491-EEA8-4018-822D-EF55DEA92BBD}
 		{5B863E1D-4700-4F88-98BB-20228276FFDC} = {907B4202-9B38-4D01-90E2-C6FC2D84523C}
 		{A677EF3C-C5AB-4CBD-949A-930D74B64114} = {907B4202-9B38-4D01-90E2-C6FC2D84523C}
+		{77A49F03-CB8F-47C7-B341-76A8AF02F3D3} = {ADCC19B3-BF1F-4F3A-89BF-25507A60B5BF}
 	EndGlobalSection
 EndGlobal
