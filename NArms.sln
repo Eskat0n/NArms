@@ -44,7 +44,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".SolutionItems", ".SolutionItems", "{9F0431BD-C979-43DD-80B6-39213B040C45}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
-		README.markdown = README.markdown
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compiling", "Compiling", "{0B429748-B9DB-419E-B27A-CA5839C41D87}"
