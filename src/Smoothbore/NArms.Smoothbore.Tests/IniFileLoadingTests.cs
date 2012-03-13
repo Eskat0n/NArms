@@ -18,7 +18,7 @@
         {
             var iniFile = IniFile.Load("TestFiles/Simple.Commented.ini");
             VerifySimpleFileContent(iniFile.Parameters);
-        }
+        }                   
 
         [Fact]
         public void ShouldProcudeCorrectElementsListForFileWithParameterComments()
