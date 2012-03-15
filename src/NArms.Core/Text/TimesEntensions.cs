@@ -1,7 +1,7 @@
-﻿using System.Text;
-
-namespace NArms.Text
+﻿namespace NArms.Text
 {
+    using System.Text;
+
     public static class TimesEntensions
     {
         public static string Times(this int times, string value)

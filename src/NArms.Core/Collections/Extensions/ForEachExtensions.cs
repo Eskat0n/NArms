@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NArms.Collections.Extensions
+﻿namespace NArms.Collections.Extensions
 {
+    using System;
+    using System.Collections.Generic;
+
     public static class ForEachExtensions
     {
         public static void ForEach<TSource>(this IEnumerable<TSource> collection, Action action)
@@ -29,7 +29,7 @@ namespace NArms.Collections.Extensions
             foreach (var item in collection)
                 func(item);
         }
-        
+
         public static void ForEach<TSource, TOut>(this IEnumerable<TSource> collection, Func<TSource, int, TOut> func)
         {
             var i = 0;
