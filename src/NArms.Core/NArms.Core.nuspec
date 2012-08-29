@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>NArms.Core</id>
+    <version>$version$</version>
+    <title>NArms.Core</title>
+    <authors>Eskat0n</authors>
+    <owners>Eskat0n</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/Eskat0n/NArms/tree/master/src/NArms.Core</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Various extension methods which helps writing your code more fluently</description>
+    <tags>ExtensionMethods Utility NArms</tags>    
+  </metadata>
+</package>
