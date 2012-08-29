@@ -1,8 +1,8 @@
-using System.Collections.Generic;
-using System.Dynamic;
-
 namespace NArms.Dynamics
 {
+    using System.Collections.Generic;
+    using System.Dynamic;
+
     public class Pouch : DynamicObject
     {
         private readonly IDictionary<string, object> _properties = new Dictionary<string, object>();

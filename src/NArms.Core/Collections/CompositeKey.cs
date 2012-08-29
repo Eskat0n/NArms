@@ -1,7 +1,7 @@
-using System;
-
 namespace NArms.Collections
 {
+    using System;
+
     public static class CompositeKey
     {
         public static CompositeKey<TItem1, TItem2> Create<TItem1, TItem2>(TItem1 key1, TItem2 key2)
@@ -9,7 +9,8 @@ namespace NArms.Collections
             return new CompositeKey<TItem1, TItem2>(key1, key2);
         }
 
-        public static CompositeKey<TItem1, TItem2, TItem3> Create<TItem1, TItem2, TItem3>(TItem1 key1, TItem2 key2, TItem3 key3)
+        public static CompositeKey<TItem1, TItem2, TItem3> Create<TItem1, TItem2, TItem3>(TItem1 key1, TItem2 key2,
+                                                                                          TItem3 key3)
         {
             return new CompositeKey<TItem1, TItem2, TItem3>(key1, key2, key3);
         }
@@ -24,8 +25,8 @@ namespace NArms.Collections
 
         public bool Equals(CompositeKey<TItem1, TItem2> other)
         {
-            return Item1.Equals(other.Item1) && 
-                Item2.Equals(other.Item2);
+            return Item1.Equals(other.Item1) &&
+                   Item2.Equals(other.Item2);
         }
 
         public override bool Equals(object obj)
@@ -50,9 +51,9 @@ namespace NArms.Collections
 
         public bool Equals(CompositeKey<TItem1, TItem2, TItem3> other)
         {
-            return Item1.Equals(other.Item1) && 
-                Item2.Equals(other.Item2) &&
-                Item3.Equals(other.Item3);
+            return Item1.Equals(other.Item1) &&
+                   Item2.Equals(other.Item2) &&
+                   Item3.Equals(other.Item3);
         }
 
         public override bool Equals(object obj)

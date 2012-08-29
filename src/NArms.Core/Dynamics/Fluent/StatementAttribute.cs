@@ -1,9 +1,9 @@
-using System;
-using System.Linq;
-using System.Text.RegularExpressions;
-
 namespace NArms.Dynamics.Fluent
 {
+    using System;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
     public class StatementAttribute : Attribute
     {
