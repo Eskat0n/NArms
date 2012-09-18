@@ -43,6 +43,7 @@
     <Compile Include="Dynamics\Fluent\DynamicStatementObject.cs" />
     <Compile Include="Dynamics\Fluent\StatementAttribute.cs" />
     <Compile Include="Dynamics\Pouch.cs" />
+    <Compile Include="Events\EventHandlerExtensions.cs" />
     <Compile Include="Numbers\TimesExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Text\TimesEntensions.cs" />
