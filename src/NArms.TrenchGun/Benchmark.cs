@@ -30,7 +30,7 @@
         public static Benchmark Create<TSuite>(TSuite suite)
             where TSuite : class, IBenchmarkSuite
         {
-            return new Benchmark();
+            throw new NotImplementedException();
         }
 
         public int PassesCount { get; private set; }
