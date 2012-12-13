@@ -42,8 +42,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonTests.cs" />
+    <Compile Include="BasicResolvingTests.cs" />
+    <Compile Include="Services\Depedencies\Dependency1.cs" />
+    <Compile Include="Services\Depedencies\Dependency2.cs" />
+    <Compile Include="Services\Depedencies\IDependency1.cs" />
+    <Compile Include="Services\Depedencies\IDependency2.cs" />
+    <Compile Include="Services\Depedencies\IDependency3.cs" />
+    <Compile Include="Services\IServiceAlpha.cs" />
+    <Compile Include="Services\IServiceBravo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ServiceAlpha.cs" />
+    <Compile Include="Services\ServiceBravo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
