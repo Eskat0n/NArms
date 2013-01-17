@@ -1,21 +1,22 @@
-using NArms.Surgery.Dynamic;
-using Xunit;
-
 namespace NArms.Surgery.Tests.Dynamic
 {
+    using NUnit.Framework;
+    using Surgery.Dynamic;
+
+    [TestFixture]
     public class DissectionExtensionsTests
     {
-        private class Stub
-        {            
+        private class SurgeryTarget
+        {
         }
 
-        [Fact]
+        [Test]
         public void CallToDissectionReturnsProxyWithCorrectTarget()
         {
-            var stub = new Stub();
+            var stub = new SurgeryTarget();
             object proxy = stub.Dissect();
 
-            Assert.IsType<DynamicProxy<Stub>>(proxy);
+            Assert.IsInstanceOf<DynamicProxy<SurgeryTarget>>(proxy);
         }
     }
 }

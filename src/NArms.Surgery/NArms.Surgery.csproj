@@ -37,6 +37,7 @@
     <Compile Include="Dynamic\DissectionExtensions.cs" />
     <Compile Include="Dynamic\DynamicProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static\DissectionExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NArms.Surgery.nuspec" />

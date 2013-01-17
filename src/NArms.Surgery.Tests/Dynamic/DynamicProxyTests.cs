@@ -1,19 +1,22 @@
-using NArms.Surgery.Dynamic;
-using Xunit;
-
 namespace NArms.Surgery.Tests.Dynamic
 {
+    using NUnit.Framework;
+    using Surgery.Dynamic;
+
+    [TestFixture]
     public class DynamicProxyTests
     {
-        private class Stub
+        private class SurgeryTarget
         {
-            private readonly string _value = "TestField";
-            private string AutoProperty { get; set; }
+            private readonly string _value;
 
-            public Stub()
+            public SurgeryTarget()
             {
+                _value = "TestField";
                 AutoProperty = "TestProperty";
             }
+
+            private string AutoProperty { get; set; }
 
             public string GetValue()
             {
@@ -26,44 +29,44 @@ namespace NArms.Surgery.Tests.Dynamic
             }
         }
 
-        [Fact]
-        public void CanReadPrivateFieldViaProxy()
+        [Test]
+        public void CanReadPrivateFieldViaDynamicProxy()
         {
-            var proxy = new Stub().Dissect();
+            var proxy = new SurgeryTarget().Dissect();
             string value = proxy._value;
 
-            Assert.Equal("TestField", value);
+            Assert.AreEqual("TestField", value);
         }
 
-        [Fact]
-        public void CanWritePrivateFieldViaProxy()
+        [Test]
+        public void CanWritePrivateFieldViaDynamicProxy()
         {
-            var stub = new Stub();
+            var stub = new SurgeryTarget();
             var proxy = stub.Dissect();
 
             proxy._value = "NewTestField";
 
-            Assert.Equal("NewTestField", stub.GetValue());
+            Assert.AreEqual("NewTestField", stub.GetValue());
         }
 
-        [Fact]
-        public void CanReadPrivateAutoPropertyViaProxy()
+        [Test]
+        public void CanReadPrivateAutoPropertyViaDynamicProxy()
         {
-            var proxy = new Stub().Dissect();
+            var proxy = new SurgeryTarget().Dissect();
             string value = proxy.AutoProperty;
 
-            Assert.Equal("TestProperty", value);
+            Assert.AreEqual("TestProperty", value);
         }
 
-        [Fact]
-        public void CanWritePrivateAutoPropertyViaProxy()
+        [Test]
+        public void CanWritePrivateAutoPropertyViaDynamicProxy()
         {
-            var stub = new Stub();
+            var stub = new SurgeryTarget();
             var proxy = stub.Dissect();
 
             proxy.AutoProperty = "NewTestProperty";
 
-            Assert.Equal("NewTestProperty", stub.GetAutoProperty());
+            Assert.AreEqual("NewTestProperty", stub.GetAutoProperty());
         }
     }
 }
