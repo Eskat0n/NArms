@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>NArms.Surgery</id>
+    <version>$version$</version>
+    <title>NArms.Surgery</title>
+    <authors>Eskat0n</authors>
+    <owners>Eskat0n</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/Eskat0n/NArms/tree/master/src/NArms.Surgery</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A tiny library for accessing object's private properties, field and methods using dynamically built proxies</description>
+    <tags>UnitTesting Utility Reflection NArms</tags>
+  </metadata>
+</package>

@@ -1,5 +1,3 @@
-using System;
-
 namespace NArms.Surgery.Dynamic
 {
     public static class DissectionExtensions
