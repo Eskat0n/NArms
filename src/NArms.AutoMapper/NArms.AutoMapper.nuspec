@@ -12,7 +12,7 @@
     <description>A pack of extension methods which improves your coding experience while using AutoMapper</description>
     <tags>AutoMapper ExtensionMethods Utility NArms</tags>
     <dependencies>
-      <dependency id="AutoMapper" version="2.0.0" />
+      <dependency id="AutoMapper" version="2.2.0" />
     </dependencies>
   </metadata>
 </package>
