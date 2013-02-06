@@ -1,16 +1,11 @@
-About
-===
+### About
 
-How to install
-===
+### How to install
 
-List of components
-===
+### List of components
 
-Changelogs
-===
+### Changelogs
 
 *  [NArms.AutoMapper](https://github.com/Eskat0n/NArms/blob/master/src/NArms.AutoMapper/CHANGELOG.md)
 
-Roadmap
-===
+### Roadmap
