@@ -2,4 +2,4 @@
 ====
 
 *  First version :)
-*  Provides MapTo<>(), MapTo<>(destination) and MapEachTo<>() extension methods to developer
+*  Provides MapTo<>(), MapTo<>(destination) and MapEachTo<>() extension methods
