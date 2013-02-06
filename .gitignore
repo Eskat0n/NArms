@@ -12,3 +12,4 @@ src/*/*/bin/*
 src/*/*/obj/*
 tests/*
 deploy/*
+packages/
