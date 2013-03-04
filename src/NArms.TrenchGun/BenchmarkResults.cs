@@ -1,4 +1,4 @@
-namespace NArms.TrenchGun
+namespace NArms.Benchmarking
 {
     using System;
     using System.Collections.Generic;

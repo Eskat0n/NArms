@@ -7,8 +7,8 @@
     <ProjectGuid>{6963B696-5F00-4CB0-8025-FE97F54AB4E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NArms.TrenchGun</RootNamespace>
-    <AssemblyName>NArms.TrenchGun</AssemblyName>
+    <RootNamespace>NArms.Benchmarking</RootNamespace>
+    <AssemblyName>NArms.Benchmarking</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Benchmark.cs" />
     <Compile Include="BenchmarkResults.cs" />
-    <Compile Include="IBenchmarkSuite.cs" />
     <Compile Include="PassInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

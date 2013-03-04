@@ -1,4 +1,4 @@
-﻿namespace NArms.TrenchGun
+﻿namespace NArms.Benchmarking
 {
     using System;
 
@@ -25,12 +25,6 @@
         public static Benchmark Create(int passesCount, Action<PassInfo> action)
         {
             return new Benchmark(passesCount, action);
-        }
-
-        public static Benchmark Create<TSuite>(TSuite suite)
-            where TSuite : class, IBenchmarkSuite
-        {
-            throw new NotImplementedException();
         }
 
         public int PassesCount { get; private set; }

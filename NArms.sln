@@ -72,9 +72,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Nuspec", ".Nuspec", "{5DC9
 		src\NArms.Surgery\NArms.Surgery.nuspec = src\NArms.Surgery\NArms.Surgery.nuspec
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TrenchGun", "TrenchGun", "{EDC000C9-0093-4754-9AF4-D53911B962A2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmarking", "Benchmarking", "{EDC000C9-0093-4754-9AF4-D53911B962A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.TrenchGun", "src\NArms.TrenchGun\NArms.TrenchGun.csproj", "{6963B696-5F00-4CB0-8025-FE97F54AB4E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Benchmarking", "src\NArms.TrenchGun\NArms.Benchmarking.csproj", "{6963B696-5F00-4CB0-8025-FE97F54AB4E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grenade", "Grenade", "{CEA16650-17D3-4266-A4BC-2DBCA1D16274}"
 EndProject

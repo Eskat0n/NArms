@@ -1,4 +1,4 @@
-namespace NArms.TrenchGun
+namespace NArms.Benchmarking
 {
     public class PassInfo
     {
