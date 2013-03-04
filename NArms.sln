@@ -29,8 +29,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Compiling", "src\Comp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Compiling.Tests", "src\Compiling.Tests\NArms.Compiling.Tests.csproj", "{2605DE17-523F-4919-A6B8-59E7A056942B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Build", ".Build", "{6D80E186-8193-4B58-96C8-C98E568C1722}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Appflow", "Appflow", "{BDDA5F12-6556-4182-B917-9436EA34A651}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A95B517F-1145-41BC-833F-53222A210307}"
