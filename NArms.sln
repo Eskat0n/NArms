@@ -56,6 +56,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Nuspec", ".Nuspec", "{5DC9
 		src\NArms.AutoMapper\NArms.AutoMapper.nuspec = src\NArms.AutoMapper\NArms.AutoMapper.nuspec
 		src\NArms.Core\NArms.Core.nuspec = src\NArms.Core\NArms.Core.nuspec
 		src\NArms.Surgery\NArms.Surgery.nuspec = src\NArms.Surgery\NArms.Surgery.nuspec
+		src\NArms.Windsor\NArms.Windsor.nuspec = src\NArms.Windsor\NArms.Windsor.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmarking", "Benchmarking", "{EDC000C9-0093-4754-9AF4-D53911B962A2}"
