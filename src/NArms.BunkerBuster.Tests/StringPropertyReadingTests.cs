@@ -23,6 +23,12 @@
 
             [ConfigOptional]
             public string NonExistentOptionalProperty { get; set; }
+
+            [ConfigDefault("NonExistentDefaultValueProperty default value")]
+            public string NonExistentDefaultValueProperty { get; set; }
+            
+            [ConfigDefault("ExistentDefaultValueProperty default value")]
+            public string ExistentDefaultValueProperty { get; set; }
         }
 
         [SetUp]
@@ -59,6 +65,18 @@
         public void ShouldSetValueForExistentOptionalProperty()
         {
             Assert.AreEqual("ExistentOptionalProperty test value", _config.ExistentOptionalProperty);
+        }
+
+        [Test]
+        public void ShouldSetDefaultValueForNonExistentPropertyWithDefaultValue()
+        {
+            Assert.AreEqual("NonExistentDefaultValueProperty default value", _config.NonExistentDefaultValueProperty);
+        }
+        
+        [Test]
+        public void ShouldNotSetDefaultValueForExistentPropertyWithDefaultValue()
+        {
+            Assert.AreEqual("ExistentDefaultValueProperty test value", _config.ExistentDefaultValueProperty);
         }
     }
 }

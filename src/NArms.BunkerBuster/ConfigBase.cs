@@ -1,7 +1,6 @@
 ﻿namespace NArms.BunkerBuster
 {
     using System.Configuration;
-    using System.Linq;
     using System.Reflection;
     using Annotations;
     using Extensions;
@@ -21,6 +20,7 @@
 
                 var keyNameAttribute = property.GetCustomAttribute<ConfigKeyNameAttribute>();
                 var optionalAttribute = property.GetCustomAttribute<ConfigOptionalAttribute>();
+                var defaultAttribute = property.GetCustomAttribute<ConfigDefaultAttribute>();
 
                 var key = keyNameAttribute == null
                               ? property.Name
@@ -29,13 +29,13 @@
                 if (ConfigurationManager.AppSettings.ContainsKey(key))
                 {
                     var value = ConfigurationManager.AppSettings[key];
-                    property.SetValue(this, value, null);    
+                    property.SetValue(this, value, null);
                 }
-                else if (optionalAttribute != null)
+                else if (defaultAttribute != null)
                 {
-                    
+                    property.SetValue(this, defaultAttribute.DefaultValue, null);
                 }
-                else
+                else if (optionalAttribute == null)
                 {
                     
                 }

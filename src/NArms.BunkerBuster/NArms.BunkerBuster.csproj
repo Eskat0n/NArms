@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annotations\ConfigDefaultAttribute.cs" />
     <Compile Include="Annotations\ConfigIgnoreAttribute.cs" />
     <Compile Include="Annotations\ConfigKeyNameAttribute.cs" />
     <Compile Include="Annotations\ConfigOptionalAttribute.cs" />
