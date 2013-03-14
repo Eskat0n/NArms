@@ -1,7 +1,9 @@
 ﻿namespace NArms.BunkerBuster
 {
     using System.Configuration;
+    using System.Linq;
     using System.Reflection;
+    using Annotations;
 
     public abstract class ConfigBase
     {
@@ -12,7 +14,14 @@
 
             foreach (var property in properties)
             {
-                var value = ConfigurationManager.AppSettings[property.Name];
+                var configKeyNameAttribute = property.GetCustomAttributes(true)
+                    .OfType<ConfigKeyNameAttribute>()
+                    .SingleOrDefault();
+
+                var key = configKeyNameAttribute == null
+                              ? property.Name
+                              : configKeyNameAttribute.Key;
+                var value = ConfigurationManager.AppSettings[key];
 
                 property.SetValue(this, value, null);
             }

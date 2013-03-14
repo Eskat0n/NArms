@@ -2,14 +2,14 @@
 {
     using System;
 
-    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     public class ConfigKeyNameAttribute : Attribute
     {
-        private readonly string _key;
+        internal string Key { get; private set; }
 
         public ConfigKeyNameAttribute(string key)
         {
-            _key = key;
+            Key = key;
         }
     }
 }

@@ -11,7 +11,10 @@
             public string StringProperty { get; set; }
 
             [ConfigKeyName("StringProperty")]
-            public string SameStringProperty { get; set; }
+            public string OtherStringProperty { get; set; }
+
+            [ConfigIgnore]
+            public string IgnoredStringProperty { get; set; }
         }
 
         [Test]
@@ -20,6 +23,22 @@
             var config = new Config();
 
             Assert.AreEqual("StringProperty test value", config.StringProperty);
+        }
+
+        [Test]
+        public void ShouldBeAbleToReadStringPropertyUsingOverridenKey()
+        {
+            var config = new Config();
+
+            Assert.AreEqual("StringProperty test value", config.OtherStringProperty);
+        }
+
+        [Test]
+        public void ShouldNotSetValueForIgnoredConfigProperty()
+        {
+            var config = new Config();
+
+            Assert.IsNull(config.IgnoredStringProperty);
         }
     }
 }
