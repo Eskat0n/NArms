@@ -22,7 +22,7 @@
             public string ExistentOptionalProperty { get; set; }
 
             [ConfigOptional]
-            public object NonExistentOptionalProperty { get; set; }
+            public string NonExistentOptionalProperty { get; set; }
         }
 
         [SetUp]
