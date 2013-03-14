@@ -43,11 +43,11 @@
     <Compile Include="Annotations\ConfigIgnoreAttribute.cs" />
     <Compile Include="Annotations\ConfigKeyNameAttribute.cs" />
     <Compile Include="ConfigBase.cs" />
+    <Compile Include="Extensions\PropertyInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Deserializers\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

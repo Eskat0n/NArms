@@ -6,6 +6,8 @@
     [TestFixture]
     public class StringPropertyReadingTests
     {
+        private Config _config;
+
         private class Config : ConfigBase
         {
             public string StringProperty { get; set; }
@@ -17,28 +19,28 @@
             public string IgnoredStringProperty { get; set; }
         }
 
+        [SetUp]
+        public void SetUp()
+        {
+            _config = new Config();
+        }
+
         [Test]
         public void ShouldBeAbleToReadStringProperty()
         {
-            var config = new Config();
-
-            Assert.AreEqual("StringProperty test value", config.StringProperty);
+            Assert.AreEqual("StringProperty test value", _config.StringProperty);
         }
 
         [Test]
         public void ShouldBeAbleToReadStringPropertyUsingOverridenKey()
         {
-            var config = new Config();
-
-            Assert.AreEqual("StringProperty test value", config.OtherStringProperty);
+            Assert.AreEqual("StringProperty test value", _config.OtherStringProperty);
         }
 
         [Test]
         public void ShouldNotSetValueForIgnoredConfigProperty()
         {
-            var config = new Config();
-
-            Assert.IsNull(config.IgnoredStringProperty);
+            Assert.IsNull(_config.IgnoredStringProperty);
         }
     }
 }
