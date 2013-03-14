@@ -2,6 +2,7 @@
 {
     using System;
     using System.Reflection;
+    using Castle.MicroKernel.Registration;
     using Castle.Windsor;
     using Castle.Windsor.Installer;
 
@@ -13,11 +14,21 @@
         private static IWindsorContainer _innerContainer;
 
         /// <summary>
-        ///   Initializes IoC using <see cref="IWindsorContainer" /> implementation installed with installers from current assembly
+        ///   Initializes IoC using <see cref="IWindsorContainer" /> implementation created with installers from current assembly
         /// </summary>
         public static void Init()
         {
             var installerAssembly = FromAssembly.Instance(Assembly.GetCallingAssembly());
+            Init(new WindsorContainer().Install(installerAssembly));
+        }
+
+        /// <summary>
+        ///   Initializes IoC using <see cref="IWindsorContainer" /> implementation created with installers from assembly containing <typeparamref name="TInstaller"/>
+        /// </summary>
+        public static void Init<TInstaller>()
+            where TInstaller : class, IWindsorInstaller
+        {
+            var installerAssembly = FromAssembly.Containing<TInstaller>();
             Init(new WindsorContainer().Install(installerAssembly));
         }
 
