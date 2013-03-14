@@ -51,7 +51,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutoMapper", "AutoMapper", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.AutoMapper", "src\NArms.AutoMapper\NArms.AutoMapper.csproj", "{77A49F03-CB8F-47C7-B341-76A8AF02F3D3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Nuspec", ".Nuspec", "{5DC9E68A-3006-4E41-BA74-ED7F3E396329}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{5DC9E68A-3006-4E41-BA74-ED7F3E396329}"
 	ProjectSection(SolutionItems) = preProject
 		src\NArms.AutoMapper\NArms.AutoMapper.nuspec = src\NArms.AutoMapper\NArms.AutoMapper.nuspec
 		src\NArms.Core\NArms.Core.nuspec = src\NArms.Core\NArms.Core.nuspec
