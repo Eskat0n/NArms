@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Annotations\ConfigIgnoreAttribute.cs" />
     <Compile Include="Annotations\ConfigKeyNameAttribute.cs" />
+    <Compile Include="Annotations\ConfigOptionalAttribute.cs" />
     <Compile Include="ConfigBase.cs" />
+    <Compile Include="Extensions\NameValueCollectionExtensions.cs" />
     <Compile Include="Extensions\PropertyInfoExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

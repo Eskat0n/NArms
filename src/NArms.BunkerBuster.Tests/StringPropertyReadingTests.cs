@@ -17,6 +17,12 @@
 
             [ConfigIgnore]
             public string IgnoredStringProperty { get; set; }
+
+            [ConfigOptional]
+            public string ExistentOptionalProperty { get; set; }
+
+            [ConfigOptional]
+            public object NonExistentOptionalProperty { get; set; }
         }
 
         [SetUp]
@@ -41,6 +47,18 @@
         public void ShouldNotSetValueForIgnoredConfigProperty()
         {
             Assert.IsNull(_config.IgnoredStringProperty);
+        }
+
+        [Test]
+        public void ShouldReturnNullValueForNonExistentOptionalProperty()
+        {
+            Assert.IsNull(_config.NonExistentOptionalProperty);
+        }
+        
+        [Test]
+        public void ShouldSetValueForExistentOptionalProperty()
+        {
+            Assert.AreEqual("ExistentOptionalProperty test value", _config.ExistentOptionalProperty);
         }
     }
 }
