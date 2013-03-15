@@ -9,7 +9,7 @@
     {
         public void ReadTo(object configInstance)
         {
-            var properties = GetType()
+            var properties = configInstance.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
             foreach (var property in properties)
