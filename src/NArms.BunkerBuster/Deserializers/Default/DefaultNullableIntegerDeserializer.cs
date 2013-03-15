@@ -1,7 +1,18 @@
 namespace NArms.BunkerBuster.Deserializers.Default
 {
+    using System;
+    using System.ComponentModel;
+
     internal class DefaultNullableIntegerDeserializer : IDeserializer
     {
+        private readonly TypeConverter _typeConverter = new Int64Converter();
+        private readonly Type _resultType;
+
+        public DefaultNullableIntegerDeserializer(Type resultType)
+        {
+            _resultType = resultType;
+        }
+
         public object Deserialize(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -9,7 +20,8 @@ namespace NArms.BunkerBuster.Deserializers.Default
 
             long result;
             long.TryParse(value, out result);
-            return result;
+          
+            return _typeConverter.ConvertTo(result, _resultType);
         }
     }
 }

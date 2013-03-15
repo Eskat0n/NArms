@@ -8,21 +8,19 @@
         {
             RegisterDeserializer<string>(new DefaultStringDeserializer());
 
-            var integerDeserializer = new DefaultIntegerDeserializer();
-            RegisterDeserializer<short>(integerDeserializer);
-            RegisterDeserializer<ushort>(integerDeserializer);
-            RegisterDeserializer<int>(integerDeserializer);
-            RegisterDeserializer<uint>(integerDeserializer);
-            RegisterDeserializer<long>(integerDeserializer);
-            RegisterDeserializer<ulong>(integerDeserializer);
+            RegisterDeserializer<short>(new DefaultIntegerDeserializer(typeof(short)));
+            RegisterDeserializer<ushort>(new DefaultIntegerDeserializer(typeof(ushort)));
+            RegisterDeserializer<int>(new DefaultIntegerDeserializer(typeof(int)));
+            RegisterDeserializer<uint>(new DefaultIntegerDeserializer(typeof(uint)));
+            RegisterDeserializer<long>(new DefaultIntegerDeserializer(typeof(long)));
+            RegisterDeserializer<ulong>(new DefaultIntegerDeserializer(typeof(ulong)));
 
-            var nullableIntegerDeserializer = new DefaultNullableIntegerDeserializer();
-            RegisterDeserializer<short?>(nullableIntegerDeserializer);
-            RegisterDeserializer<ushort?>(nullableIntegerDeserializer);
-            RegisterDeserializer<int?>(nullableIntegerDeserializer);
-            RegisterDeserializer<uint?>(nullableIntegerDeserializer);
-            RegisterDeserializer<long?>(nullableIntegerDeserializer);
-            RegisterDeserializer<ulong?>(nullableIntegerDeserializer);
+            RegisterDeserializer<short?>(new DefaultNullableIntegerDeserializer(typeof(short?)));
+            RegisterDeserializer<ushort?>(new DefaultNullableIntegerDeserializer(typeof(ushort?)));
+            RegisterDeserializer<int?>(new DefaultNullableIntegerDeserializer(typeof(int?)));
+            RegisterDeserializer<uint?>(new DefaultNullableIntegerDeserializer(typeof(uint?)));
+            RegisterDeserializer<long?>(new DefaultNullableIntegerDeserializer(typeof(long?)));
+            RegisterDeserializer<ulong?>(new DefaultNullableIntegerDeserializer(typeof(ulong?)));
         }
     }
 }

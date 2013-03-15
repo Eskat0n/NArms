@@ -9,25 +9,25 @@
 
         private class Config : ConfigBase
         {
-            public string StringProperty { get; set; }
+            [ConfigKeyName("IntegerProperty")]
+            public short ShortProperty { get; set; }
 
-            [ConfigKeyName("StringProperty")]
-            public string OtherStringProperty { get; set; }
+            [ConfigKeyName("IntegerProperty")]
+            public ushort UShortProperty { get; set; }
 
-            [ConfigIgnore]
-            public string IgnoredStringProperty { get; set; }
+            [ConfigKeyName("IntegerProperty")]
+            public int IntProperty { get; set; }
 
-            [ConfigOptional]
-            public string ExistentOptionalProperty { get; set; }
+            [ConfigKeyName("IntegerProperty")]
+            public uint UIntProperty { get; set; }
+            
+            [ConfigKeyName("IntegerProperty")]
+            public long LongProperty { get; set; }
 
-            [ConfigOptional]
-            public string NonExistentOptionalProperty { get; set; }
+            [ConfigKeyName("IntegerProperty")]
+            public ulong ULongProperty { get; set; }
 
-            [ConfigDefault("NonExistentDefaultValueProperty default value")]
-            public string NonExistentDefaultValueProperty { get; set; }
-
-            [ConfigDefault("ExistentDefaultValueProperty default value")]
-            public string ExistentDefaultValueProperty { get; set; }
+            public short OverflowProperty { get; set; }
         }
 
         [SetUp]
@@ -35,5 +35,16 @@
         {
             _config = new Config();
         } 
+
+        [Test]
+        public void ShouldBeAbleToReadAllTypesOfIntegerProperties()
+        {
+            Assert.AreEqual(4321, _config.ShortProperty);
+            Assert.AreEqual(4321, _config.UShortProperty);
+            Assert.AreEqual(4321, _config.IntProperty);
+            Assert.AreEqual(4321, _config.UIntProperty);
+            Assert.AreEqual(4321, _config.LongProperty);
+            Assert.AreEqual(4321, _config.ULongProperty);
+        }
     }
 }

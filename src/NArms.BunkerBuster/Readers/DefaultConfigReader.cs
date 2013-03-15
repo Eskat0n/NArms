@@ -3,10 +3,23 @@
     using System.Configuration;
     using System.Reflection;
     using Annotations;
+    using Deserializers;
     using Extensions;
 
     public class DefaultConfigReader : IConfigReader
     {
+        private readonly IDeserializersRegistry _deserializers;
+
+        public DefaultConfigReader()
+            : this(new DefaultDeserializersRegistry())
+        {
+        }
+
+        public DefaultConfigReader(IDeserializersRegistry deserializers)
+        {
+            _deserializers = deserializers;
+        }
+
         public void ReadTo(object configInstance)
         {
             var properties = configInstance.GetType()
@@ -29,7 +42,9 @@
                 if (ConfigurationManager.AppSettings.ContainsKey(key))
                 {
                     var value = ConfigurationManager.AppSettings[key];
-                    property.SetValue(configInstance, value, null);
+                    var deserializedValue = _deserializers.Deserialize(value, property.PropertyType);
+
+                    property.SetValue(configInstance, deserializedValue, null);
                 }
                 else if (defaultAttribute != null)
                 {
