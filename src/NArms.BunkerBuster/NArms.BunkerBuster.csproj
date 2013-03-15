@@ -45,15 +45,20 @@
     <Compile Include="Annotations\ConfigKeyNameAttribute.cs" />
     <Compile Include="Annotations\ConfigOptionalAttribute.cs" />
     <Compile Include="ConfigBase.cs" />
+    <Compile Include="Deserializers\DefaultDeserializersRegistry.cs" />
+    <Compile Include="Deserializers\Default\DefaultNullableIntegerDeserializer.cs" />
+    <Compile Include="Deserializers\Default\DefaultIntegerDeserializer.cs" />
+    <Compile Include="Deserializers\Default\DefaultStringDeserializer.cs" />
+    <Compile Include="Deserializers\DeserializersRegistryBase.cs" />
+    <Compile Include="IDeserializer.cs" />
+    <Compile Include="IDeserializersRegistry.cs" />
     <Compile Include="Extensions\NameValueCollectionExtensions.cs" />
     <Compile Include="Extensions\PropertyInfoExtensions.cs" />
     <Compile Include="IConfigReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Readers\DefaultConfigReader.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Deserializers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
