@@ -1,44 +1,28 @@
 ﻿namespace NArms.BunkerBuster
 {
-    using System.Configuration;
-    using System.Reflection;
-    using Annotations;
-    using Extensions;
+    using Readers;
 
     public abstract class ConfigBase
     {
+        private static IConfigReader _configReader = new DefaultConfigReader();
+
         protected ConfigBase()
         {
-            var properties = GetType()
-                .GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            ConfigReader.ReadTo(this);
+        }
 
-            foreach (var property in properties)
+        public static IConfigReader ConfigReader
+        {
+            get
             {
-                var ignoreAttribute = property.GetCustomAttribute<ConfigIgnoreAttribute>();
-                if (ignoreAttribute != null)
-                    continue;
+                return _configReader;
+            }
+            set
+            {
+                if (value == null)
+                    return;
 
-                var keyNameAttribute = property.GetCustomAttribute<ConfigKeyNameAttribute>();
-                var optionalAttribute = property.GetCustomAttribute<ConfigOptionalAttribute>();
-                var defaultAttribute = property.GetCustomAttribute<ConfigDefaultAttribute>();
-
-                var key = keyNameAttribute == null
-                              ? property.Name
-                              : keyNameAttribute.Key;
-
-                if (ConfigurationManager.AppSettings.ContainsKey(key))
-                {
-                    var value = ConfigurationManager.AppSettings[key];
-                    property.SetValue(this, value, null);
-                }
-                else if (defaultAttribute != null)
-                {
-                    property.SetValue(this, defaultAttribute.DefaultValue, null);
-                }
-                else if (optionalAttribute == null)
-                {
-                    
-                }
+                _configReader = value;
             }
         }
     }
