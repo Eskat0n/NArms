@@ -1,10 +1,10 @@
-using Xunit;
-
 namespace NArms.Compiling.Tests.Services
 {
+    using NUnit.Framework;
+
     public class CompilingServiceTests
     {
-        [Fact]
+        [Test]
         public void ShouldCompileRunReturnCorrectResultForAriphmeticalExpression()
         {
             
