@@ -1,11 +1,12 @@
 using System.Text;
-using Xunit;
 
 namespace NArms.Howitzer.Tests
 {
+    using NUnit.Framework;
+
     public class XmlMarkupCommentTests
     {
-        [Fact]
+        [Test]
         public void CallToCommentShouldEncloseGivenTextInComment()
         {
             var sb = new StringBuilder();
@@ -13,7 +14,7 @@ namespace NArms.Howitzer.Tests
             dynamic xmlMarkup = new XmlMarkup(ref sb);
             xmlMarkup.Comment_("This is a comment");
 
-            Assert.Equal("<!--This is a comment-->", sb.ToString());
+            Assert.AreEqual("<!--This is a comment-->", sb.ToString());
         }
     }
 }

@@ -1,23 +1,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using NArms.Howitzer.NamingConventions.Utils;
-using Xunit;
 
 namespace NArms.Howitzer.Tests.NamingConventions.Utils
 {
+    using NUnit.Framework;
+
     public class WordSplitterTests
     {
-        [Fact]
+        [Test]
         public void ShouldSplitPascalCaseNameCorrectCount()
         {
             const string source = "PascalCaseTestName";
 
             var words = WordSplitter.Split(source);
             
-            Assert.Equal(4, words.Count());
+            Assert.AreEqual(4, words.Count());
         }
 
-        [Fact]
+        [Test]
         public void ShouldSplitPascalCaseNameCorrectWords()
         {
             const string source = "PascalCaseTestName";
@@ -25,23 +26,23 @@ namespace NArms.Howitzer.Tests.NamingConventions.Utils
             var words = WordSplitter.Split(source);
             var wordsList = new List<string>(words);
 
-            Assert.Equal("Pascal", wordsList[0]);
-            Assert.Equal("Case", wordsList[1]);
-            Assert.Equal("Test", wordsList[2]);
-            Assert.Equal("Name", wordsList[3]);
+            Assert.AreEqual("Pascal", wordsList[0]);
+            Assert.AreEqual("Case", wordsList[1]);
+            Assert.AreEqual("Test", wordsList[2]);
+            Assert.AreEqual("Name", wordsList[3]);
         }
 
-        [Fact]
+        [Test]
         public void ShouldSplitMixedCaseNameCorrectCount()
         {
             const string source = "mixedCaseTestName";
 
             var words = WordSplitter.Split(source);
 
-            Assert.Equal(4, words.Count());
+            Assert.AreEqual(4, words.Count());
         }
 
-        [Fact]
+        [Test]
         public void ShouldSplitMixedCaseNameCorrectWords()
         {
             const string source = "mixedCaseTestName";
@@ -49,23 +50,23 @@ namespace NArms.Howitzer.Tests.NamingConventions.Utils
             var words = WordSplitter.Split(source);
             var wordsList = new List<string>(words);
 
-            Assert.Equal("mixed", wordsList[0]);            
-            Assert.Equal("Case", wordsList[1]);
-            Assert.Equal("Test", wordsList[2]);
-            Assert.Equal("Name", wordsList[3]);
+            Assert.AreEqual("mixed", wordsList[0]);            
+            Assert.AreEqual("Case", wordsList[1]);
+            Assert.AreEqual("Test", wordsList[2]);
+            Assert.AreEqual("Name", wordsList[3]);
         }
 
-        [Fact]
+        [Test]
         public void ShouldSplitUnderscoredNamesCorrectCount()
         {
             const string source = "underscored_test_name";
 
             var words = WordSplitter.Split(source, '_');
 
-            Assert.Equal(3, words.Count());
+            Assert.AreEqual(3, words.Count());
         }
 
-        [Fact]
+        [Test]
         public void ShouldSplitUnderscoredNamesCorrectWords()
         {
             const string source = "underscored_test_name";
@@ -73,12 +74,12 @@ namespace NArms.Howitzer.Tests.NamingConventions.Utils
             var words = WordSplitter.Split(source, '_');
             var wordsList = new List<string>(words);
 
-            Assert.Equal("underscored", wordsList[0]);
-            Assert.Equal("test", wordsList[1]);
-            Assert.Equal("name", wordsList[2]);
+            Assert.AreEqual("underscored", wordsList[0]);
+            Assert.AreEqual("test", wordsList[1]);
+            Assert.AreEqual("name", wordsList[2]);
         }
 
-        [Fact]
+        [Test]
         public void ShouldSplitUnderscoredNamesCorrectWhileAllWordsIsUppercased()
         {
             const string source = "UNDERSCORED_TEST_NAME";
@@ -86,9 +87,9 @@ namespace NArms.Howitzer.Tests.NamingConventions.Utils
             var words = WordSplitter.Split(source, '_');
             var wordsList = new List<string>(words);
 
-            Assert.Equal("UNDERSCORED", wordsList[0]);
-            Assert.Equal("TEST", wordsList[1]);
-            Assert.Equal("NAME", wordsList[2]);
+            Assert.AreEqual("UNDERSCORED", wordsList[0]);
+            Assert.AreEqual("TEST", wordsList[1]);
+            Assert.AreEqual("NAME", wordsList[2]);
         }
     }
 }

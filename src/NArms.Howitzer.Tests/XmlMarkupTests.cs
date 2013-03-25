@@ -1,12 +1,12 @@
-using System;
-using System.Text;
-using Xunit;
-
 namespace NArms.Howitzer.Tests
 {
+    using System;
+    using System.Text;
+    using NUnit.Framework;
+
     public class XmlMarkupTests
     {
-        [Fact]
+        [Test]
         public void CreateXmlMarkupObjectWithStringBuilderChangesApplyToBoth()
         {
             var sb = new StringBuilder();
@@ -15,20 +15,20 @@ namespace NArms.Howitzer.Tests
 
             sb.Append("Test string");
 
-            Assert.Equal(sb, xmlMarkup.Target);
+            Assert.AreEqual(sb, xmlMarkup.Target);
         }
 
-        [Fact]
+        [Test]
         public void CreateXmlMarkupObjectWithCustomIndent()
         {
             var sb = new StringBuilder();
 
             dynamic xmlMarkup = new XmlMarkup(ref sb, 5);
 
-            Assert.Equal(5, xmlMarkup.Indent);
+            Assert.AreEqual(5, xmlMarkup.Indent);
         }
 
-        [Fact]
+        [Test]
         public void ThrowsExceptionForNegativeIndentValue()
         {
             Assert.Throws<ArgumentException>(() =>
@@ -39,7 +39,8 @@ namespace NArms.Howitzer.Tests
         }
 
         // TODO: fix test
-        [Fact(Skip = "Developemnt of Howitzer is in on-hold state")]
+        [Test]
+        [Ignore("Developemnt of Howitzer is in on-hold state")]
         public void CanAssignValueToAnyXmlTagWithWords()
         {
             var sb = new StringBuilder();
@@ -47,11 +48,12 @@ namespace NArms.Howitzer.Tests
             dynamic xmlMarkup = new XmlMarkup(ref sb);
             xmlMarkup.TestTag("TestValue");
 
-            Assert.Equal("<TestTag>TestValue</TestTag>", sb.ToString());
+            Assert.AreEqual("<TestTag>TestValue</TestTag>", sb.ToString());
         }
 
         // TODO: fix test
-        [Fact(Skip = "Developemnt of Howitzer is in on-hold state")]
+        [Test]
+        [Ignore("Developemnt of Howitzer is in on-hold state")]
         public void AssigningNoValueToAnyXmlTagCreatesEmptyTag()
         {
             var sb = new StringBuilder();
@@ -59,11 +61,12 @@ namespace NArms.Howitzer.Tests
             dynamic xmlMarkup = new XmlMarkup(ref sb);
             xmlMarkup.TestTag();
 
-            Assert.Equal("<TestTag></TestTag>", sb.ToString());
+            Assert.AreEqual("<TestTag></TestTag>", sb.ToString());
         }
 
         // TODO: fix test
-        [Fact(Skip = "Developemnt of Howitzer is in on-hold state")]
+        [Test]
+        [Ignore("Developemnt of Howitzer is in on-hold state")]
         public void CanAssignAttrubtesToTagByAnonymousObjectWithValue()
         {
             var sb = new StringBuilder();
@@ -71,7 +74,7 @@ namespace NArms.Howitzer.Tests
             dynamic xmlMarkup = new XmlMarkup(ref sb);
             xmlMarkup.TestTag("TestValue", new {firstAttribute = "AttributeValue"});
 
-            Assert.Equal("<TestTag firstAttribute=\"AttributeValue\">TestValue</TestTag>", sb.ToString());
+            Assert.AreEqual("<TestTag firstAttribute=\"AttributeValue\">TestValue</TestTag>", sb.ToString());
         }
     }
 }

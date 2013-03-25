@@ -1,11 +1,12 @@
-using NArms.Appflow.ArgumentDriven.Configurations;
-using Xunit;
-
 namespace NArms.Appflow.Tests.ArgumentDriven.Configurations
 {
+    using Appflow.ArgumentDriven.Configurations;
+    using NUnit.Framework;
+
+    [TestFixture]
     public class FlagArgumentConfigurationTests
     {
-        [Fact]
+        [Test]
         public void ShouldReturnTrueIfThereIsEmptyString()
         {
             var configuration = new FlagArgumentConfiguration("test");

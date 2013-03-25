@@ -1,11 +1,12 @@
 using NArms.Howitzer.NamingConventions;
-using Xunit;
 
 namespace NArms.Howitzer.Tests.NamingConventions
 {
+    using NUnit.Framework;
+
     public class DashedNamingConventionTests
     {
-        [Fact]
+        [Test]
         public void InvokeToApplyConvertsFromPascalCaseToDashed()
         {
             const string sourceName = "PascalCaseName";
@@ -13,10 +14,10 @@ namespace NArms.Howitzer.Tests.NamingConventions
             var namingConvention = new DashedNamingConvention();
             var name = namingConvention.Apply(sourceName);
 
-            Assert.Equal("pascal-case-name", name);
+            Assert.AreEqual("pascal-case-name", name);
         }
 
-        [Fact]
+        [Test]
         public void InvokeToApplyConvertsFromMixedCaseToDashed()
         {
             const string sourceName = "mixedCaseName";
@@ -24,10 +25,10 @@ namespace NArms.Howitzer.Tests.NamingConventions
             var namingConvention = new DashedNamingConvention();
             var name = namingConvention.Apply(sourceName);
 
-            Assert.Equal("mixed-case-name", name);
+            Assert.AreEqual("mixed-case-name", name);
         }
 
-        [Fact]
+        [Test]
         public void InvokeToApplyConvertsFromUnderscoredToDashed()
         {
             const string sourceName = "underscored_name";
@@ -35,7 +36,7 @@ namespace NArms.Howitzer.Tests.NamingConventions
             var namingConvention = new DashedNamingConvention();
             var name = namingConvention.Apply(sourceName);
 
-            Assert.Equal("underscored-name", name);
+            Assert.AreEqual("underscored-name", name);
         }
     }
 }

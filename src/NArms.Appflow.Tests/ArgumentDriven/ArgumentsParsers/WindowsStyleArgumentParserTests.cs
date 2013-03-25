@@ -1,13 +1,13 @@
-using Xunit;
-
 namespace NArms.Appflow.Tests.ArgumentDriven.ArgumentsParsers
 {
+    using NUnit.Framework;
+
+    [TestFixture]
     public class WindowsStyleArgumentParserTests
     {
-        [Fact]
+        [Test]
         public void ShouldParseFlagAttributes()
         {
-            
         }
     }
 }

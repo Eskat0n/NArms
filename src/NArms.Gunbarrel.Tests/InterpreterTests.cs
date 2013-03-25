@@ -1,20 +1,21 @@
-using Xunit;
-
 namespace NArms.Gunbarrel.Tests
 {
+    using NUnit.Framework;
+
+    [TestFixture]
     public class InterpreterTests
     {
         private class TestLanguageMetadata : LanguageMetadata
         {
         }
 
-        [Fact]
+        [Test]
         public void CanCreateCustomInterpreterUsingLanguageMetadata()
         {
             var metadata = new TestLanguageMetadata();
             var interpreter = Interpreter.CreateFor(metadata);
 
-            Assert.Equal(metadata, interpreter.LanguageMetadata);
+            Assert.AreEqual(metadata, interpreter.LanguageMetadata);
         }
     }
 }

@@ -1,22 +1,23 @@
 using System.Collections.Generic;
 using NArms.Dynamics;
-using Xunit;
 
 namespace NArms.Core.Dynamics
 {
+    using NUnit.Framework;
+
     public class PouchTests
     {
-        [Fact]
+        [Test]
         public void CanSetAndGetValueOfAnyPropertyByItsName()
         {
             dynamic pouch = new Pouch();
 
             pouch.Property = 15;
             
-            Assert.Equal(15, pouch.Property);
+            Assert.AreEqual(15, pouch.Property);
         }
 
-        [Fact]
+        [Test]
         public void GettingUnsettedPropertyValueReturnsNull()
         {
             dynamic pouch = new Pouch();
@@ -24,7 +25,7 @@ namespace NArms.Core.Dynamics
             Assert.Null(pouch.Property);
         }
 
-        [Fact]
+        [Test]
         public void CanBeConvertedToDictionary()
         {
             dynamic pouch = new Pouch();
@@ -33,10 +34,10 @@ namespace NArms.Core.Dynamics
             IDictionary<string, object> dictionary = pouch.ToDictionary();
 
             Assert.True(dictionary.ContainsKey("Property"));
-            Assert.Equal("test", dictionary["Property"]);
+            Assert.AreEqual("test", dictionary["Property"]);
         }
 
-        [Fact]
+        [Test]
         public void MakingChangesToDictionaryDoNotChangePouchInstance()
         {
             dynamic pouch = new Pouch();
@@ -46,8 +47,8 @@ namespace NArms.Core.Dynamics
             dictionary["Property"] = "newTest";
 
             Assert.True(dictionary.ContainsKey("Property"));
-            Assert.Equal("newTest", dictionary["Property"]);
-            Assert.Equal("test", pouch.Property);
+            Assert.AreEqual("newTest", dictionary["Property"]);
+            Assert.AreEqual("test", pouch.Property);
         }
     }
 }

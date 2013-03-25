@@ -1,41 +1,41 @@
-using NArms.Howitzer.NamingConventions;
-using Xunit;
-
 namespace NArms.Howitzer.Tests.NamingConventions
 {
+    using Howitzer.NamingConventions;
+    using NUnit.Framework;
+
     public class PascalCaseNamingConventionTests
     {
-        [Fact]
+        [Test]
         public void InvokeToApplyShouldLeavePascalCaseNameUnmodified()
         {
             const string sourceName = "PascalCaseName";
 
             var namingConvention = new PascalCaseNamingConvention();
-            var name = namingConvention.Apply(sourceName);
+            string name = namingConvention.Apply(sourceName);
 
-            Assert.Equal(sourceName, name);
+            Assert.AreEqual(sourceName, name);
         }
 
-        [Fact]
+        [Test]
         public void InvokeToApplyConvertsFromMixedCaseToPascalCase()
         {
             const string sourceName = "mixedCaseName";
 
             var namingConvention = new PascalCaseNamingConvention();
-            var name = namingConvention.Apply(sourceName);
+            string name = namingConvention.Apply(sourceName);
 
-            Assert.Equal("MixedCaseName", name);
+            Assert.AreEqual("MixedCaseName", name);
         }
 
-        [Fact]
+        [Test]
         public void InvokeToApplyConvertsFromUnderscoredCaseToPascalCase()
         {
             const string sourceName = "underscored_case_name";
 
             var namingConvention = new PascalCaseNamingConvention();
-            var name = namingConvention.Apply(sourceName);
+            string name = namingConvention.Apply(sourceName);
 
-            Assert.Equal("UnderscoredCaseName", name);
+            Assert.AreEqual("UnderscoredCaseName", name);
         }
     }
 }
