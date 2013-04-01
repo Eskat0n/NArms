@@ -1,59 +1,59 @@
-using NArms.Howitzer.NamingConventions.Utils;
-using Xunit;
-
 namespace NArms.Howitzer.Tests.NamingConventions.Utils
 {
+    using Howitzer.NamingConventions.Utils;
+    using NUnit.Framework;
+
     public class StringExtensionsTests
     {
         private const string EnglishStringUpper = "THIS IS UPPER STRING";
         private const string EnglishStringLower = "this is lower string";
 
-        [Fact]
+        [Test]
         public void IsUpperCorrectForEnglish()
         {
             Assert.True(EnglishStringUpper.IsUpper());
         }
 
-        [Fact]
+        [Test]
         public void IsUpperCorrectFalseForEnglish()
         {
             Assert.False(EnglishStringLower.IsUpper());
         }
 
-        [Fact]
+        [Test]
         public void IsLowerCorrectForEnglish()
         {
             Assert.True(EnglishStringLower.IsLower());
         }
 
-        [Fact]
+        [Test]
         public void IsLowerCorrectFalseForEnglish()
         {
             Assert.False(EnglishStringUpper.IsLower());
         }
 
-        [Fact]
+        [Test]
         public void CapitalizeCorrectForLongStrings()
         {
             const string str = "capitalize me";
 
-            Assert.Equal("Capitalize me", str.Capitalize());
+            Assert.AreEqual("Capitalize me", str.Capitalize());
         }
 
-        [Fact]
+        [Test]
         public void CapitalizeCorrectForOneCharacterStrings()
         {
             const string str = "c";
 
-            Assert.Equal("C", str.Capitalize());
+            Assert.AreEqual("C", str.Capitalize());
         }
 
-        [Fact]
+        [Test]
         public void CapitalizationShouldMakeAllCharactersLowercaseExceptForfirst()
         {
             const string str = "capITALIZE mE";
 
-            Assert.Equal("Capitalize me", str.Capitalize());
+            Assert.AreEqual("Capitalize me", str.Capitalize());
         }
     }
 }

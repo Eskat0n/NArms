@@ -1,16 +1,17 @@
 using NArms.Howitzer.Rss.Extensions;
-using Xunit;
 
 namespace NArms.Howitzer.Rss.Tests.Extensions
 {
+    using NUnit.Framework;
+
     public class StringExtensionsTests
     {
-        [Fact]
+        [Test]
         public void CallToCdataExtensionMethodShouldEncloseInCdataTag()
         {
             const string source = "Test value";
 
-            Assert.Equal("<![CDATA[Test value]]>", source.Cdata());
+            Assert.AreEqual("<![CDATA[Test value]]>", source.Cdata());
         }
     }
 }

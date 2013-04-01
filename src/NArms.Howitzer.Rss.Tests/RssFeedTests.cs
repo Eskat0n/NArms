@@ -1,11 +1,12 @@
 using System;
-using Xunit;
 
 namespace NArms.Howitzer.Rss.Tests
 {
+    using NUnit.Framework;
+
     public class RssFeedTests
     {
-        [Fact]
+        [Test]
         public void CanCreateFeedWithInternalContentStringBuilder()
         {
             var feed = new RssFeed();
@@ -13,7 +14,7 @@ namespace NArms.Howitzer.Rss.Tests
             Assert.NotNull(feed.Content);
         }
 
-        [Fact]
+        [Test]
         public void GettingChannelAlwaysReturnsOneChannel()
         {
             var feed = new RssFeed();
@@ -21,18 +22,18 @@ namespace NArms.Howitzer.Rss.Tests
             var channelOne = feed.Channel;
             var channelTwo = feed.Channel;
 
-            Assert.Equal(channelOne, channelTwo);
+            Assert.AreEqual(channelOne, channelTwo);
         }
 
-        [Fact]
+        [Test]
         public void CreatingFeedAppendsToContentCorrectVersion()
         {
             var feed = new RssFeed();
             var content = feed.Content;
             var lines = content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
-            Assert.Equal("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", lines[0]);
-            Assert.Equal("<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\">", lines[1]);
+            Assert.AreEqual("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", lines[0]);
+            Assert.AreEqual("<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\">", lines[1]);
         }
     }
 }

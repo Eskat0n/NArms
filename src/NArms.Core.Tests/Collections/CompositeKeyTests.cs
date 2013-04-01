@@ -1,68 +1,69 @@
 ﻿using NArms.Collections;
-using Xunit;
 
 namespace NArms.Core.Collections
 {
+    using NUnit.Framework;
+
     public class CompositeKeyTests
     {
         #region CompositeKey with two generic parameters
 
-        [Fact]
+        [Test]
         public void ComparisonOfTwoCompositeKeysForTwoValuesEqualValuesCorrect()
         {
             var firstCompositeKey = CompositeKey.Create("Test1", "Test2");
             var secondCompositeKey = CompositeKey.Create("Test1", "Test2");
 
-            Assert.Equal(firstCompositeKey, secondCompositeKey);            
-        }       
-        
-        [Fact]
+            Assert.AreEqual(firstCompositeKey, secondCompositeKey);            
+        }
+
+        [Test]
         public void ComparisonOfTwoCompositeKeysForTwoValuesOneNonEqualValueCorrect()
         {
             var firstCompositeKey = CompositeKey.Create("Test1", "Test2");
             var secondCompositeKey = CompositeKey.Create("Test1", "Test3");
 
-            Assert.NotEqual(firstCompositeKey, secondCompositeKey);            
+            Assert.AreNotEqual(firstCompositeKey, secondCompositeKey);            
         }
-        
-        [Fact]
+
+        [Test]
         public void ComparisonOfTwoCompositeKeysForTwoValuesNonEqualValuesCorrect()
         {
             var firstCompositeKey = CompositeKey.Create("Test1", "Test2");
             var secondCompositeKey = CompositeKey.Create("Test3", "Test4");
 
-            Assert.NotEqual(firstCompositeKey, secondCompositeKey);            
+            Assert.AreNotEqual(firstCompositeKey, secondCompositeKey);            
         }
 
         #endregion
         
         #region CompositeKey with three generic parameters
 
-        [Fact]
+        [Test]
         public void ComparisonOfTwoCompositeKeysForThreeValuesEqualValuesCorrect()
         {
             var firstCompositeKey = CompositeKey.Create("Test1", "Test2", "Test3");
             var secondCompositeKey = CompositeKey.Create("Test1", "Test2", "Test3");
 
-            Assert.Equal(firstCompositeKey, secondCompositeKey);            
-        }       
-        
-        [Fact]
+            Assert.AreEqual(firstCompositeKey, secondCompositeKey);            
+        }
+
+        [Test]
         public void ComparisonOfTwoCompositeKeysForThreeValuesOneNonEqualValueCorrect()
         {
             var firstCompositeKey = CompositeKey.Create("Test1", "Test2", "Test3");
             var secondCompositeKey = CompositeKey.Create("Test1", "Test2", "Test4");
 
-            Assert.NotEqual(firstCompositeKey, secondCompositeKey);            
+            Assert.AreNotEqual(firstCompositeKey, secondCompositeKey);            
         }
-        
-        [Fact]
+
+        [Test]
         public void ComparisonOfTwoCompositeKeysForThreeValuesNonEqualValuesCorrect()
         {
             var firstCompositeKey = CompositeKey.Create("Test1", "Test2", "Test3");
             var secondCompositeKey = CompositeKey.Create("Test4", "Test5", "Test6");
 
-            Assert.NotEqual(firstCompositeKey, secondCompositeKey);            
+            Assert.AreNotEqual(firstCompositeKey, secondCompositeKey);            
         }
 
         #endregion

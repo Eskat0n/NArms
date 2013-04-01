@@ -1,11 +1,12 @@
 using System.Text;
-using Xunit;
 
 namespace NArms.Howitzer.Tests
 {
+    using NUnit.Framework;
+
     public class XmlMarkupCdataTests
     {
-        [Fact]
+        [Test]
         public void CallToCdataShouldEncloseGivenTextInCdataTag()
         {
             var sb = new StringBuilder();
@@ -13,7 +14,7 @@ namespace NArms.Howitzer.Tests
             dynamic xmlMarkup = new XmlMarkup(ref sb);
             xmlMarkup.Cdata_("Text in cdata");
 
-            Assert.Equal("<![CDATA[Text in cdata]]>", sb.ToString());
+            Assert.AreEqual("<![CDATA[Text in cdata]]>", sb.ToString());
         }
     }
 }

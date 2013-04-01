@@ -1,13 +1,15 @@
 using System;
 using System.Text;
-using Xunit;
 
 namespace NArms.Howitzer.Tests
 {
+    using NUnit.Framework;
+
     public class XmlMarkupTagNestingTests
     {
         // TODO: implement this test functionality in future
-        [Fact(Skip = "For implementing in future")]
+        [Test]
+        [Ignore("For implementing in future")]
         public void CanAddNestedTagsWithUsingClause()
         {
             var sb = new StringBuilder();
@@ -22,11 +24,11 @@ namespace NArms.Howitzer.Tests
 
             var lines = sb.ToString().Split(Environment.NewLine.ToCharArray());
 
-            Assert.Equal("<Family>", lines[0]);
-            Assert.Equal("  <Child>Bob</Child>", lines[1]);
-            Assert.Equal("  <Child>Tom</Child>", lines[2]);
-            Assert.Equal("  <Child>Jerry</Child>", lines[3]);
-            Assert.Equal("</Family>", lines[4]);
+            Assert.AreEqual("<Family>", lines[0]);
+            Assert.AreEqual("  <Child>Bob</Child>", lines[1]);
+            Assert.AreEqual("  <Child>Tom</Child>", lines[2]);
+            Assert.AreEqual("  <Child>Jerry</Child>", lines[3]);
+            Assert.AreEqual("</Family>", lines[4]);
         }
     }
 }

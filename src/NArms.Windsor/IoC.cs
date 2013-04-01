@@ -18,7 +18,8 @@
         /// </summary>
         public static void Init()
         {
-            var installerAssembly = FromAssembly.Instance(Assembly.GetCallingAssembly());
+            var installerAssembly = FromAssembly.Instance(Assembly.GetCallingAssembly(),
+                                                          new OrderedInstallerFactory());
             Init(new WindsorContainer().Install(installerAssembly));
         }
 
