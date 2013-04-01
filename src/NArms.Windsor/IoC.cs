@@ -29,7 +29,7 @@
         public static void Init<TInstaller>()
             where TInstaller : class, IWindsorInstaller
         {
-            var installerAssembly = FromAssembly.Containing<TInstaller>();
+            var installerAssembly = FromAssembly.Containing<TInstaller>(new OrderedInstallerFactory());
             Init(new WindsorContainer().Install(installerAssembly));
         }
 
