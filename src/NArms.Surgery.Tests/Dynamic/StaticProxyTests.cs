@@ -37,6 +37,7 @@
         }
 
         [Test]
+        [Ignore("Not implemented yet")]
         public void CanReadPrivateFieldViaStaticProxy()
         {
             var proxy = new SurgeryTarget().Dissect<Proxy>();

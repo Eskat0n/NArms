@@ -6,6 +6,7 @@
     using NUnit.Framework;
 
     [TestFixture]
+    [Ignore("Not implemented yet")]
     public class EventHandlerExtensionsTests
     {
         [TestFixtureSetUp]
