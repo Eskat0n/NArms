@@ -1,6 +1,6 @@
 namespace NArms.Grenade
 {
-    public class LinkConfiguration<TFacade> : ILinkConfiguration<TFacade>
+    internal class LinkConfiguration<TFacade> : ILinkConfiguration<TFacade>
     {
         private readonly Registration _registration;
 

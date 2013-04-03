@@ -2,7 +2,7 @@ namespace NArms.Grenade
 {
     using System;
 
-    public class LinkConfiguration : ILinkConfiguration
+    internal class LinkConfiguration : ILinkConfiguration
     {
         private readonly Registration _registration;
 
