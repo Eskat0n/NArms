@@ -12,7 +12,7 @@
     <description>A pack of extension methods which improves your coding experience while using Castle.Windsor IoC-container</description>
     <tags>Windsor IoC ExtensionMethods Utility NArms</tags>
     <dependencies>
-      <dependency id="Castle.Windsor" version="3.2.0" />
+      <dependency id="Castle.Windsor" version="2.5.2" />
     </dependencies>
   </metadata>
 </package>
