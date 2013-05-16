@@ -43,21 +43,37 @@
         }
 
         /// <summary>
-        ///   Tries to resolve implemnetation of service type given
+        ///     Tries to resolve implemnetation of service type given
         /// </summary>
-        /// <typeparam name="TService">Type of service </typeparam>
+        /// <typeparam name="TService">Type of service</typeparam>
         /// <exception cref="InvalidOperationException">Thrown if IoC is not initialized yet</exception>
-        /// <returns> Implementation of <typeparamref name="TService" /> </returns>
+        /// <returns>
+        ///     Implementation of <typeparamref name="TService" />
+        /// </returns>
+        /// <exception cref="InvalidOperationException">Thrown if container is not initialized yet</exception>
         public static TService Resolve<TService>()
             where TService : class
+        {
+            return (TService) Resolve(typeof (TService));
+        }
+
+        /// <summary>
+        ///     Tries to resolve implemnetation of service type given
+        /// </summary>
+        /// <param name="serviceType">Type of service</param>
+        /// <returns>
+        ///     Implementation of <paramref name="serviceType" />
+        /// </returns>
+        /// <exception cref="InvalidOperationException">Thrown if container is not initialized yet</exception>
+        public static object Resolve(Type serviceType)
         {
             if (_innerContainer == null)
                 throw new InvalidOperationException(
                     string.Format("Unable to resolve class implementing {0} since IoC container is not initialized yet",
-                                  typeof (TService).Name),
+                                  serviceType.Name),
                     new NullReferenceException("Private field _innerContainer is null"));
 
-            return _innerContainer.Resolve<TService>();
+            return _innerContainer.Resolve(serviceType);
         }
     }
 }
