@@ -54,7 +54,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NArms.AutoMapper\NArms.AutoMapper.csproj">
       <Project>{77a49f03-cb8f-47c7-b341-76a8af02f3d3}</Project>
-      <Name>NArms.AutoMapper</Name>
+      <Name>NArms.AutoMapper %28AutoMapper\NArms.AutoMapper%29</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
