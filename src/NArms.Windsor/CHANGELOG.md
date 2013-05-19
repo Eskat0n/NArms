@@ -14,6 +14,7 @@
 ### Version 1.1.0
 
 *  Added attribute for specifying order in which installers would be executed during initialization
+*  Switched to shorter version format
 
 ### Version 1.0.1.0
 
