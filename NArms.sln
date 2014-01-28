@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Howitzer.Tests", "src\NArms.Howitzer.Tests\NArms.Howitzer.Tests.csproj", "{2AE63F6F-2494-4111-85C4-400A7E3A348A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Howitzer", "src\NArms.Howitzer\NArms.Howitzer.csproj", "{7A3DC79D-19FA-444E-BF5E-7C859A0DC656}"
@@ -98,6 +100,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NArms.Windsor", "NArms.Wind
 		src\NArms.Windsor\README.md = src\NArms.Windsor\README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.FluentMigrator", "src\NArms.FluentMigrator\NArms.FluentMigrator.csproj", "{2958045C-3898-463E-8702-8EE7695A6AB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentMigrator", "FluentMigrator", "{C22BDD04-E276-4AFE-9112-CB67D5E0CB86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -188,6 +194,10 @@ Global
 		{B573DA51-D4FC-48DE-8758-E7A2813B1C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B573DA51-D4FC-48DE-8758-E7A2813B1C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B573DA51-D4FC-48DE-8758-E7A2813B1C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2958045C-3898-463E-8702-8EE7695A6AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2958045C-3898-463E-8702-8EE7695A6AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2958045C-3898-463E-8702-8EE7695A6AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2958045C-3898-463E-8702-8EE7695A6AB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,5 +226,6 @@ Global
 		{B573DA51-D4FC-48DE-8758-E7A2813B1C3A} = {A1F85755-B145-45F5-AEA1-34A778FA6755}
 		{F744EC2B-AB05-4B17-8CAE-F18DAF29A336} = {72DD6F55-C5FB-4C1D-8534-7799D9F84C68}
 		{380B6297-A594-4B6C-9852-1DBA98100618} = {72DD6F55-C5FB-4C1D-8534-7799D9F84C68}
+		{2958045C-3898-463E-8702-8EE7695A6AB8} = {C22BDD04-E276-4AFE-9112-CB67D5E0CB86}
 	EndGlobalSection
 EndGlobal
