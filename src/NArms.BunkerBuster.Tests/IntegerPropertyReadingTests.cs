@@ -1,5 +1,6 @@
-﻿namespace NArms.BunkerBuster.Tests
+﻿namespace NArms.Config.Tests
 {
+    using Config;
     using Annotations;
     using NUnit.Framework;
 

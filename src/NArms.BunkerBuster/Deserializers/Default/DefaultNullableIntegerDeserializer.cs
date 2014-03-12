@@ -1,4 +1,4 @@
-namespace NArms.BunkerBuster.Deserializers.Default
+namespace NArms.Config.Deserializers.Default
 {
     using System;
     using System.ComponentModel;

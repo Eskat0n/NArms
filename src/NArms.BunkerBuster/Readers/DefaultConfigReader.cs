@@ -1,4 +1,4 @@
-﻿namespace NArms.BunkerBuster.Readers
+﻿namespace NArms.Config.Readers
 {
     using System.Configuration;
     using System.Reflection;

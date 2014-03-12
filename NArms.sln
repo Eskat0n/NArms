@@ -56,6 +56,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{5DC9E68A-3006-4E41-BA74-ED7F3E396329}"
 	ProjectSection(SolutionItems) = preProject
 		src\NArms.AutoMapper\NArms.AutoMapper.nuspec = src\NArms.AutoMapper\NArms.AutoMapper.nuspec
+		src\NArms.BunkerBuster\NArms.Config.nuspec = src\NArms.BunkerBuster\NArms.Config.nuspec
 		src\NArms.Core\NArms.Core.nuspec = src\NArms.Core\NArms.Core.nuspec
 		src\NArms.Surgery\NArms.Surgery.nuspec = src\NArms.Surgery\NArms.Surgery.nuspec
 		src\NArms.Windsor\NArms.Windsor.nuspec = src\NArms.Windsor\NArms.Windsor.nuspec

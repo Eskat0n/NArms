@@ -1,4 +1,4 @@
-﻿namespace NArms.BunkerBuster.Deserializers
+﻿namespace NArms.Config.Deserializers
 {
     using Default;
 

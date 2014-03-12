@@ -1,4 +1,4 @@
-namespace NArms.BunkerBuster
+namespace NArms.Config
 {
     public interface IDeserializer
     {

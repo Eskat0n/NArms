@@ -1,4 +1,4 @@
-﻿namespace NArms.BunkerBuster.Extensions
+﻿namespace NArms.Config.Extensions
 {
     using System;
     using System.Linq;

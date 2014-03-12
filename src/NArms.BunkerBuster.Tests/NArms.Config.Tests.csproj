@@ -7,8 +7,8 @@
     <ProjectGuid>{14277A22-649F-46CD-8456-C1A3AAF180F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NArms.BunkerBuster.Tests</RootNamespace>
-    <AssemblyName>NArms.BunkerBuster.Tests</AssemblyName>
+    <RootNamespace>NArms.Config.Tests</RootNamespace>
+    <AssemblyName>NArms.Config.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>

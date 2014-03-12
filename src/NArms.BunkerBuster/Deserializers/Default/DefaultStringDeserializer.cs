@@ -1,4 +1,4 @@
-namespace NArms.BunkerBuster.Deserializers.Default
+namespace NArms.Config.Deserializers.Default
 {
     internal class DefaultStringDeserializer : IDeserializer
     {

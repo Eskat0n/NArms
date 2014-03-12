@@ -1,4 +1,4 @@
-﻿namespace NArms.BunkerBuster.Annotations
+﻿namespace NArms.Config.Annotations
 {
     using System;
 
