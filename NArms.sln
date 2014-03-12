@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Howitzer.Tests", "src\NArms.Howitzer.Tests\NArms.Howitzer.Tests.csproj", "{2AE63F6F-2494-4111-85C4-400A7E3A348A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Howitzer", "src\NArms.Howitzer\NArms.Howitzer.csproj", "{7A3DC79D-19FA-444E-BF5E-7C859A0DC656}"
@@ -86,9 +88,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Windsor", "src\NArms.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BunkerBuster", "BunkerBuster", "{30671E27-DF01-4E36-AF05-AE9BB972FC95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.BunkerBuster", "src\NArms.BunkerBuster\NArms.BunkerBuster.csproj", "{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Config", "src\NArms.BunkerBuster\NArms.Config.csproj", "{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.BunkerBuster.Tests", "src\NArms.BunkerBuster.Tests\NArms.BunkerBuster.Tests.csproj", "{14277A22-649F-46CD-8456-C1A3AAF180F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Config.Tests", "src\NArms.BunkerBuster.Tests\NArms.Config.Tests.csproj", "{14277A22-649F-46CD-8456-C1A3AAF180F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

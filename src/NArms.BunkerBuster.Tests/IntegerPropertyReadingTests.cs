@@ -3,6 +3,7 @@
     using Annotations;
     using NUnit.Framework;
 
+    [TestFixture]
     public class IntegerPropertyReadingTests
     {
         private Config _config;
