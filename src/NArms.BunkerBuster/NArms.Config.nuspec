@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>NArms.Config</id>
+    <version>$version$</version>
+    <title>NArms.Config</title>
+    <authors>Eskat0n</authors>
+    <owners>Eskat0n</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/Eskat0n/NArms/tree/master/src/NArms.BunkerBuster</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tiny config parsing library</description>
+    <tags>Configuration EnvironmentManagement Utility NArms</tags>
+  </metadata>
+</package>

@@ -56,6 +56,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{5DC9E68A-3006-4E41-BA74-ED7F3E396329}"
 	ProjectSection(SolutionItems) = preProject
 		src\NArms.AutoMapper\NArms.AutoMapper.nuspec = src\NArms.AutoMapper\NArms.AutoMapper.nuspec
+		src\NArms.BunkerBuster\NArms.Config.nuspec = src\NArms.BunkerBuster\NArms.Config.nuspec
 		src\NArms.Core\NArms.Core.nuspec = src\NArms.Core\NArms.Core.nuspec
 		src\NArms.Surgery\NArms.Surgery.nuspec = src\NArms.Surgery\NArms.Surgery.nuspec
 		src\NArms.Windsor\NArms.Windsor.nuspec = src\NArms.Windsor\NArms.Windsor.nuspec
@@ -103,6 +104,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.FluentMigrator", "src\NArms.FluentMigrator\NArms.FluentMigrator.csproj", "{2958045C-3898-463E-8702-8EE7695A6AB8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentMigrator", "FluentMigrator", "{C22BDD04-E276-4AFE-9112-CB67D5E0CB86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BunkerBuster", "BunkerBuster", "{30671E27-DF01-4E36-AF05-AE9BB972FC95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Config", "src\NArms.BunkerBuster\NArms.Config.csproj", "{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Config.Tests", "src\NArms.BunkerBuster.Tests\NArms.Config.Tests.csproj", "{14277A22-649F-46CD-8456-C1A3AAF180F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -198,6 +205,14 @@ Global
 		{2958045C-3898-463E-8702-8EE7695A6AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2958045C-3898-463E-8702-8EE7695A6AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2958045C-3898-463E-8702-8EE7695A6AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -227,5 +242,7 @@ Global
 		{F744EC2B-AB05-4B17-8CAE-F18DAF29A336} = {72DD6F55-C5FB-4C1D-8534-7799D9F84C68}
 		{380B6297-A594-4B6C-9852-1DBA98100618} = {72DD6F55-C5FB-4C1D-8534-7799D9F84C68}
 		{2958045C-3898-463E-8702-8EE7695A6AB8} = {C22BDD04-E276-4AFE-9112-CB67D5E0CB86}
+		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2} = {30671E27-DF01-4E36-AF05-AE9BB972FC95}
+		{14277A22-649F-46CD-8456-C1A3AAF180F6} = {30671E27-DF01-4E36-AF05-AE9BB972FC95}
 	EndGlobalSection
 EndGlobal
