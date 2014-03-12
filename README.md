@@ -1,6 +1,10 @@
 ### About
 
+NArms is collection of .NET extension methods which are intended to improve overall performance while using any .NET language.
+
 ### How to install
+
+Just install package(s) you need from NuGet. Get a list of all packages [here](http://nuget.org/packages?q=NArms).
 
 ### List of components
 
